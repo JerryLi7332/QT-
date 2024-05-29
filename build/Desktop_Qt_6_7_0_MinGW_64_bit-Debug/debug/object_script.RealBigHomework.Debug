@@ -1,0 +1,13 @@
+debug/assessmenu.o
+debug/basicdialog1.o
+debug/basicdialog2.o
+debug/main.o
+debug/mainmenu.o
+debug/testmenu.o
+debug/tutorialmenu.o
+debug/moc_assessmenu.o
+debug/moc_basicdialog1.o
+debug/moc_basicdialog2.o
+debug/moc_mainmenu.o
+debug/moc_testmenu.o
+debug/moc_tutorialmenu.o

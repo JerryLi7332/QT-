@@ -1,0 +1,13 @@
+release/assessmenu.o
+release/basicdialog1.o
+release/basicdialog2.o
+release/main.o
+release/mainmenu.o
+release/testmenu.o
+release/tutorialmenu.o
+release/moc_assessmenu.o
+release/moc_basicdialog1.o
+release/moc_basicdialog2.o
+release/moc_mainmenu.o
+release/moc_testmenu.o
+release/moc_tutorialmenu.o
