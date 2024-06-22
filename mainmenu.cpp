@@ -46,7 +46,7 @@ void MainMenu::on_btTest_clicked()
 {
     TestMenu* menu_2=new TestMenu(this);
     menu_2->show();
-    ui->btTest->setText("测试ing");
+    //ui->btTest->setText("测试ing");
 
 
 }
