@@ -15,6 +15,7 @@ public:
     explicit BasicDialog1(QWidget *parent = nullptr);
     ~BasicDialog1();
 
+
 private:
     Ui::BasicDialog1 *ui;
 };

@@ -9,21 +9,25 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Texts.cpp \
     assessmenu.cpp \
     basicdialog1.cpp \
     basicdialog2.cpp \
     main.cpp \
     mainmenu.cpp \
     testmenu.cpp \
-    tutorialmenu.cpp
+    tutorialmenu.cpp \
+    tutorialwidget.cpp
 
 HEADERS += \
+    Texts.h \
     assessmenu.h \
     basicdialog1.h \
     basicdialog2.h \
     mainmenu.h \
     testmenu.h \
-    tutorialmenu.h
+    tutorialmenu.h \
+    tutorialwidget.h
 
 FORMS += \
     assessmenu.ui \
@@ -31,7 +35,8 @@ FORMS += \
     basicdialog2.ui \
     mainmenu.ui \
     testmenu.ui \
-    tutorialmenu.ui
+    tutorialmenu.ui \
+    tutorialwidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

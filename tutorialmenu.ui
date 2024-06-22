@@ -32,7 +32,7 @@
      <string>欢迎来到教程，以下有几种音乐类型供您选择</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btClassic">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -45,7 +45,7 @@
      <string>古典</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="btJazz">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -58,7 +58,7 @@
      <string>爵士</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btRock">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -71,7 +71,7 @@
      <string>摇滚</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="btPop">
     <property name="geometry">
      <rect>
       <x>70</x>
