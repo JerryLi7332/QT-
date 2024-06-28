@@ -3,7 +3,9 @@
 
 #include <QWidget>
 #include "basicdialog1.h"
+#include"musicwidget.h"
 #include <QLabel>
+#include <QMediaPlayer>
 
 namespace Ui {
 class TutorialWidget;
@@ -19,16 +21,20 @@ public:
 
 private:
     Ui::TutorialWidget *ui;
+    //QMediaPlayer* MediaPlayer;
 
 public:
     QLabel * lb0;
     QLabel * lb1;
     QLabel * lb2;
     QLabel * lb3;
-    BasicDialog1* newDialog;
+    MusicWidget* music_widget;
+    //BasicDialog1* newDialog;
+
 
 private slots:
-    void showDialog();
+    //void showDialog();
+    //void showMusicWidget();
 
 };
 

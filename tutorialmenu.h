@@ -33,6 +33,7 @@ private:
     //TutorialWidget* classic;
     TutorialWidget* jazz;
     TutorialWidget* rock;
+    TutorialWidget* rock__1;
     TutorialWidget* pop;
 };
 

@@ -23,7 +23,19 @@ extern QString pop_1;
 extern QString pop_2;
 extern QString pop_3;
 
+extern QString path_now;
 
+
+extern QString trysth;
+extern QString path_classic;
+extern QString path_jazz;
+extern QString path_rock;
+extern QString path_pop;
+
+extern QString blue;
+extern QString waww;
+extern QString myLife;
+extern QString cruel_summer;
 
 
 #endif // TEXTS_H
