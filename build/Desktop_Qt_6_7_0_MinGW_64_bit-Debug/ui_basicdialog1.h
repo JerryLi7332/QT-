@@ -29,13 +29,11 @@ public:
         BasicDialog1->resize(400, 300);
         buttonBox = new QDialogButtonBox(BasicDialog1);
         buttonBox->setObjectName("buttonBox");
-        buttonBox->setGeometry(QRect(40, 230, 341, 32));
+        buttonBox->setGeometry(QRect(20, 220, 341, 32));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
 
         retranslateUi(BasicDialog1);
-        QObject::connect(buttonBox, &QDialogButtonBox::accepted, BasicDialog1, qOverload<>(&QDialog::accept));
-        QObject::connect(buttonBox, &QDialogButtonBox::rejected, BasicDialog1, qOverload<>(&QDialog::reject));
 
         QMetaObject::connectSlotsByName(BasicDialog1);
     } // setupUi

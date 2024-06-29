@@ -289,11 +289,16 @@ Makefile: ../../RealBigHomework.pro ../../../../My_Qt/6.7.0/mingw_64/mkspecs/fea
 		../../../../My_Qt/6.7.0/mingw_64/mkspecs/features/yacc.prf \
 		../../../../My_Qt/6.7.0/mingw_64/mkspecs/features/lex.prf \
 		../../RealBigHomework.pro \
+		../../../../My_Qt/6.7.0/mingw_64/lib/Qt6MultimediaWidgets.prl \
+		../../../../My_Qt/6.7.0/mingw_64/lib/Qt6Multimedia.prl \
 		../../../../My_Qt/6.7.0/mingw_64/lib/Qt6Widgets.prl \
 		../../../../My_Qt/6.7.0/mingw_64/lib/Qt6Gui.prl \
+		../../../../My_Qt/6.7.0/mingw_64/lib/Qt6Network.prl \
 		../../../../My_Qt/6.7.0/mingw_64/lib/Qt6Core.prl \
 		../../../../My_Qt/6.7.0/mingw_64/lib/Qt6EntryPoint.prl \
-		../../../../My_Qt/6.7.0/mingw_64/mkspecs/features/build_pass.prf
+		../../../../My_Qt/6.7.0/mingw_64/mkspecs/features/build_pass.prf \
+		../../images.qrc \
+		../../songs.qrc
 	$(QMAKE) -o Makefile ..\..\RealBigHomework.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 ../../../../My_Qt/6.7.0/mingw_64/mkspecs/features/spec_pre.prf:
 ../../../../My_Qt/6.7.0/mingw_64/mkspecs/features/device_config.prf:
@@ -514,11 +519,16 @@ Makefile: ../../RealBigHomework.pro ../../../../My_Qt/6.7.0/mingw_64/mkspecs/fea
 ../../../../My_Qt/6.7.0/mingw_64/mkspecs/features/yacc.prf:
 ../../../../My_Qt/6.7.0/mingw_64/mkspecs/features/lex.prf:
 ../../RealBigHomework.pro:
+../../../../My_Qt/6.7.0/mingw_64/lib/Qt6MultimediaWidgets.prl:
+../../../../My_Qt/6.7.0/mingw_64/lib/Qt6Multimedia.prl:
 ../../../../My_Qt/6.7.0/mingw_64/lib/Qt6Widgets.prl:
 ../../../../My_Qt/6.7.0/mingw_64/lib/Qt6Gui.prl:
+../../../../My_Qt/6.7.0/mingw_64/lib/Qt6Network.prl:
 ../../../../My_Qt/6.7.0/mingw_64/lib/Qt6Core.prl:
 ../../../../My_Qt/6.7.0/mingw_64/lib/Qt6EntryPoint.prl:
 ../../../../My_Qt/6.7.0/mingw_64/mkspecs/features/build_pass.prf:
+../../images.qrc:
+../../songs.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\RealBigHomework.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

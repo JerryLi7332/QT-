@@ -25,10 +25,10 @@ class Ui_TutorialMenu
 public:
     QWidget *centralwidget;
     QLabel *label;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
+    QPushButton *btClassic;
+    QPushButton *btJazz;
+    QPushButton *btRock;
+    QPushButton *btPop;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -45,18 +45,18 @@ public:
         QFont font;
         font.setPointSize(15);
         label->setFont(font);
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(70, 140, 80, 24));
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(70, 190, 80, 24));
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(70, 240, 80, 24));
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(70, 290, 80, 24));
+        btClassic = new QPushButton(centralwidget);
+        btClassic->setObjectName("btClassic");
+        btClassic->setGeometry(QRect(70, 140, 80, 24));
+        btJazz = new QPushButton(centralwidget);
+        btJazz->setObjectName("btJazz");
+        btJazz->setGeometry(QRect(70, 190, 80, 24));
+        btRock = new QPushButton(centralwidget);
+        btRock->setObjectName("btRock");
+        btRock->setGeometry(QRect(70, 240, 80, 24));
+        btPop = new QPushButton(centralwidget);
+        btPop->setObjectName("btPop");
+        btPop->setGeometry(QRect(70, 290, 80, 24));
         TutorialMenu->setCentralWidget(centralwidget);
         menubar = new QMenuBar(TutorialMenu);
         menubar->setObjectName("menubar");
@@ -75,10 +75,10 @@ public:
     {
         TutorialMenu->setWindowTitle(QCoreApplication::translate("TutorialMenu", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("TutorialMenu", "\346\254\242\350\277\216\346\235\245\345\210\260\346\225\231\347\250\213\357\274\214\344\273\245\344\270\213\346\234\211\345\207\240\347\247\215\351\237\263\344\271\220\347\261\273\345\236\213\344\276\233\346\202\250\351\200\211\346\213\251", nullptr));
-        pushButton->setText(QCoreApplication::translate("TutorialMenu", "\345\217\244\345\205\270", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("TutorialMenu", "\347\210\265\345\243\253", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("TutorialMenu", "\346\221\207\346\273\232", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("TutorialMenu", "\346\265\201\350\241\214", nullptr));
+        btClassic->setText(QCoreApplication::translate("TutorialMenu", "\345\217\244\345\205\270", nullptr));
+        btJazz->setText(QCoreApplication::translate("TutorialMenu", "\347\210\265\345\243\253", nullptr));
+        btRock->setText(QCoreApplication::translate("TutorialMenu", "\346\221\207\346\273\232", nullptr));
+        btPop->setText(QCoreApplication::translate("TutorialMenu", "\346\265\201\350\241\214", nullptr));
     } // retranslateUi
 
 };

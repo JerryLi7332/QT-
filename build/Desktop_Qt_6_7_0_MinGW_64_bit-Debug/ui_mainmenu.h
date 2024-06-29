@@ -10,9 +10,11 @@
 #define UI_MAINMENU_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
@@ -24,14 +26,17 @@ QT_BEGIN_NAMESPACE
 class Ui_MainMenu
 {
 public:
+    QAction *actionsomething;
     QWidget *centralwidget;
-    QLabel *main_title;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
     QPushButton *btTutorial;
     QPushButton *btTest;
     QPushButton *btAssess;
+    QLabel *label;
     QMenuBar *menubar;
+    QMenu *menu;
+    QMenu *menu_2;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainMenu)
@@ -42,17 +47,10 @@ public:
         QFont font;
         font.setWeight(QFont::Light);
         MainMenu->setFont(font);
+        actionsomething = new QAction(MainMenu);
+        actionsomething->setObjectName("actionsomething");
         centralwidget = new QWidget(MainMenu);
         centralwidget->setObjectName("centralwidget");
-        main_title = new QLabel(centralwidget);
-        main_title->setObjectName("main_title");
-        main_title->setGeometry(QRect(240, 80, 281, 71));
-        QFont font1;
-        font1.setPointSize(20);
-        font1.setWeight(QFont::ExtraBold);
-        font1.setItalic(false);
-        main_title->setFont(font1);
-        main_title->setTextFormat(Qt::AutoText);
         verticalLayoutWidget = new QWidget(centralwidget);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
         verticalLayoutWidget->setGeometry(QRect(220, 150, 281, 221));
@@ -88,14 +86,29 @@ public:
 
         verticalLayout->addWidget(btAssess);
 
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(220, 90, 511, 31));
+        QFont font1;
+        font1.setPointSize(15);
+        font1.setBold(true);
+        label->setFont(font1);
         MainMenu->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainMenu);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 800, 21));
+        menu = new QMenu(menubar);
+        menu->setObjectName("menu");
+        menu_2 = new QMenu(menubar);
+        menu_2->setObjectName("menu_2");
         MainMenu->setMenuBar(menubar);
         statusbar = new QStatusBar(MainMenu);
         statusbar->setObjectName("statusbar");
         MainMenu->setStatusBar(statusbar);
+
+        menubar->addAction(menu->menuAction());
+        menubar->addAction(menu_2->menuAction());
+        menu->addAction(actionsomething);
 
         retranslateUi(MainMenu);
 
@@ -105,10 +118,13 @@ public:
     void retranslateUi(QMainWindow *MainMenu)
     {
         MainMenu->setWindowTitle(QCoreApplication::translate("MainMenu", "MainMenu", nullptr));
-        main_title->setText(QCoreApplication::translate("MainMenu", "\344\270\200\344\270\252\345\205\263\344\272\216\351\237\263\344\271\220\347\232\204\350\275\257\344\273\266", nullptr));
+        actionsomething->setText(QCoreApplication::translate("MainMenu", "someAction", nullptr));
         btTutorial->setText(QCoreApplication::translate("MainMenu", "\346\225\231\347\250\213", nullptr));
         btTest->setText(QCoreApplication::translate("MainMenu", "\346\265\213\350\257\225", nullptr));
         btAssess->setText(QCoreApplication::translate("MainMenu", "\346\265\213\350\257\204", nullptr));
+        label->setText(QCoreApplication::translate("MainMenu", "\344\270\200\344\270\252\345\205\263\344\272\216\351\237\263\344\271\220\347\232\204\350\275\257\344\273\266", nullptr));
+        menu->setTitle(QCoreApplication::translate("MainMenu", "\350\277\231\351\207\214\345\217\257\344\273\245\345\206\231\344\270\234\350\245\277", nullptr));
+        menu_2->setTitle(QCoreApplication::translate("MainMenu", "\350\277\231\351\207\214\344\271\237\350\241\214", nullptr));
     } // retranslateUi
 
 };
