@@ -29,6 +29,11 @@ void TutorialMenu::on_btClassic_clicked()
     classic->lb2->setWordWrap(true);
     classic->lb3->setWordWrap(true);
 
+    //classic->music_widget->mediaPlayer->setSource(QUrl::fromLocalFile(path_classic));
+
+    classic->music_widget->setMusic(path_classic);
+    classic->music_widget->updateMusicTitle(blue);
+
     classic->show();
 }
 
@@ -46,8 +51,12 @@ void TutorialMenu::on_btJazz_clicked()
     jazz->lb3->setText(jazz_3);
     jazz->lb3->setWordWrap(true);
 
+    jazz->music_widget->setMusic(path_jazz);
+    jazz->music_widget->updateMusicTitle(waww);
+
     jazz->show();
 }
+
 
 
 void TutorialMenu::on_btRock_clicked()
@@ -55,18 +64,20 @@ void TutorialMenu::on_btRock_clicked()
     rock=new TutorialWidget();
 
     rock->lb0->setText(rock_0);
-    rock->lb1->setText(rock_1);
-    rock->lb2->setText(rock_2);
-    rock->lb3->setText(rock_3);
     rock->lb0->setWordWrap(true);
+    rock->lb1->setText(rock_1);
     rock->lb1->setWordWrap(true);
+    rock->lb2->setText(rock_2);
     rock->lb2->setWordWrap(true);
+    rock->lb3->setText(rock_3);
     rock->lb3->setWordWrap(true);
+
+    rock->music_widget->setMusic(path_rock);
+    rock->music_widget->updateMusicTitle(myLife);
 
     rock->show();
 
 }
-
 
 
 
@@ -84,7 +95,12 @@ void TutorialMenu::on_btPop_clicked()
     pop->lb2->setWordWrap(true);
     pop->lb3->setWordWrap(true);
 
+    pop->music_widget->setMusic(path_pop);
+    pop->music_widget->updateMusicTitle(cruel_summer);
+
     pop->show();
 
 }
+
+
 

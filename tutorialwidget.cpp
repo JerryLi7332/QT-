@@ -28,30 +28,21 @@ TutorialWidget::TutorialWidget(QWidget *parent)
     list->setStyleSheet("QListWidget::item { height: 60px;}");
 
     lb0=new QLabel("窗口0",this);
-    //classic_1="我偷偷换掉成这一句";
     lb1=new QLabel("窗口1",this);
-    lb1->setWordWrap(true);
-    //QLabel * lb2=new QLabel(classic_2,this);
+    //lb1->setWordWrap(true);
     lb2=new QLabel("defult文案",this);
-    lb2->setWordWrap(true);
+    //lb2->setWordWrap(true);
     lb3=new QLabel(this);
-    lb3->setText("看到这句话说明还没搭好逻辑yet");
-    lb3->setWordWrap(true);
-
-    QWidget* page4=new QWidget;
-    QPushButton* pb1=new QPushButton("神奇按钮",page4);
-
-    //创建垂直布局管理器
-    QVBoxLayout *vLayout = new QVBoxLayout(page4);
-    vLayout->addWidget(pb1, 0, Qt::AlignHCenter); // 将按钮居中添加到垂直布局中
-    vLayout->addStretch(); // 添加拉伸因子，使按钮居中显示
+    //lb3->setText("看到这句话说明还没搭好逻辑yet");
+    //lb3->setWordWrap(true);
+    music_widget=new MusicWidget;
 
 
     stack->addWidget(lb0);
     stack->addWidget(lb1);
     stack->addWidget(lb2);
     stack->addWidget(lb3);
-    stack->addWidget(page4);
+    stack->addWidget(music_widget);
 
     //水平布局
     QHBoxLayout * hlayout = new QHBoxLayout(this);
@@ -61,23 +52,23 @@ TutorialWidget::TutorialWidget(QWidget *parent)
     hlayout->addWidget(stack,5,Qt::AlignHCenter);
 
     connect(list,SIGNAL(currentRowChanged(int)),stack,SLOT(setCurrentIndex(int)));
-    connect(pb1,&QPushButton::clicked,this,&TutorialWidget::showDialog);
+
+    //connect(pb1,&QPushButton::clicked,this,&TutorialWidget::showDialog);
+    //connect(pb1,&QPushButton::clicked,this,&TutorialWidget::showMusicWidget);
 
 }
 
-void TutorialWidget::showDialog(){
-    newDialog=new BasicDialog1;
-    QLabel* temp=new QLabel(newDialog);
-    temp->setText("这应该是一个试听界面，可以播放音乐或视频。如你所见，现在还没有设计好。");
-    QVBoxLayout *layout = new QVBoxLayout;
-    layout->addWidget(temp);  // 将 QLabel 添加到布局中
 
-    // 设置布局管理器
-    newDialog->setLayout(layout);
-    newDialog->exec();
-}
+
+//void TutorialWidget::showMusicWidget(){
+  //  music_widget=new MusicWidget;
+    //music_widget->show();
+//}
 
 TutorialWidget::~TutorialWidget()
 {
     delete ui;
+    music_widget->mediaPlayer->stop();
+    music_widget->mediaPlayer->setAudioOutput(nullptr);
+    delete music_widget;
 }
