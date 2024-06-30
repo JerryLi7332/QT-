@@ -27,6 +27,8 @@ private slots:
 
     void on_btPop_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::TutorialMenu *ui;
 

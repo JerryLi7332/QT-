@@ -29,7 +29,7 @@
     </sizepolicy>
    </property>
    <property name="text">
-    <string>This is a label</string>
+    <string>This should be a label</string>
    </property>
   </widget>
   <widget class="QWidget" name="widget" native="true">
@@ -61,7 +61,7 @@
   <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>140</x>
      <y>310</y>
      <width>121</width>
      <height>71</height>
@@ -114,6 +114,20 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>330</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>温馨提示：音频约30s。
+如需中途退出页面，请先点击左侧“停止”按钮。</string>
+   </property>
   </widget>
  </widget>
  <resources/>

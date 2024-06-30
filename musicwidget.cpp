@@ -6,6 +6,7 @@
 #include <QHBoxLayout>
 #include <QPushButton>
 #include <QString>
+#include <QFont>
 
 
 MusicWidget::MusicWidget(QWidget *parent)
@@ -36,14 +37,17 @@ void MusicWidget::setMusic(QString path){
 void MusicWidget::updateMusicTitle(QString title)
 {
     ui->label->setText(title);
+    QFont font("Arial",12);
+    ui->label->setFont(font);
     ui->label->setWordWrap(true);
 }
 
 MusicWidget::~MusicWidget()
 {
     delete ui;
-    mediaPlayer->stop();
     mediaPlayer->setAudioOutput(NULL);
+    mediaPlayer->stop();
+
     delete mediaPlayer;
     delete audioOutput;
 }

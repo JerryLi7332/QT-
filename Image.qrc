@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/1.jpeg</file>
+        <file>image/3.jpg</file>
+        <file>xiaoyequ.mp3</file>
+    </qresource>
+    <qresource prefix="/s">
+        <file>image/haidun.jpeg</file>
+        <file>image/3.jpg</file>
+    </qresource>
+</RCC>

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>教程</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -37,63 +37,93 @@
      <rect>
       <x>70</x>
       <y>140</y>
-      <width>80</width>
-      <height>24</height>
+      <width>71</width>
+      <height>71</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix1/image/1.jpeg);
+border-image: url(:/new/prefix1/image/classic.png);</string>
+    </property>
     <property name="text">
-     <string>古典</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btJazz">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>190</y>
-      <width>80</width>
-      <height>24</height>
+      <x>190</x>
+      <y>140</y>
+      <width>81</width>
+      <height>81</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix1/image/1.jpeg);
+</string>
+    </property>
     <property name="text">
-     <string>爵士</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btRock">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>240</y>
-      <width>80</width>
-      <height>24</height>
+      <x>320</x>
+      <y>140</y>
+      <width>81</width>
+      <height>81</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix1/image/rock.png);</string>
+    </property>
     <property name="text">
-     <string>摇滚</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="btPop">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>290</y>
-      <width>80</width>
-      <height>24</height>
+      <x>440</x>
+      <y>140</y>
+      <width>111</width>
+      <height>101</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/new/prefix1/image/pop.png);</string>
+    </property>
     <property name="text">
-     <string>流行</string>
+     <string/>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>21</height>
-    </rect>
-   </property>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>150</y>
+      <width>101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(175, 175, 175);
+background-color: rgb(227, 227, 227);
+color: rgb(9, 9, 9);
+background-color: rgb(185, 185, 185);</string>
+    </property>
+    <property name="text">
+     <string>返回主菜单</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

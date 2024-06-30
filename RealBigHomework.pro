@@ -16,6 +16,9 @@ SOURCES += \
     main.cpp \
     mainmenu.cpp \
     musicwidget.cpp \
+    reportdialog.cpp \
+    test1.cpp \
+    test2.cpp \
     testmenu.cpp \
     tutorialmenu.cpp \
     tutorialwidget.cpp
@@ -27,6 +30,9 @@ HEADERS += \
     basicdialog2.h \
     mainmenu.h \
     musicwidget.h \
+    reportdialog.h \
+    test1.h \
+    test2.h \
     testmenu.h \
     tutorialmenu.h \
     tutorialwidget.h
@@ -37,6 +43,8 @@ FORMS += \
     basicdialog2.ui \
     mainmenu.ui \
     musicwidget.ui \
+    reportdialog.ui \
+    test1.ui \
     testmenu.ui \
     tutorialmenu.ui \
     tutorialwidget.ui
@@ -47,6 +55,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
+    Image.qrc \
     images.qrc \
     songs.qrc
 

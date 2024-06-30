@@ -1,12 +1,15 @@
 #include "tutorialmenu.h"
 #include "ui_tutorialmenu.h"
 #include "Texts.h"
+#include <QDebug>
 
 TutorialMenu::TutorialMenu(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::TutorialMenu)
 {
     setFixedSize(800,600);
+    this->setWindowTitle("测试");
+    qDebug() << "Window title set to '测试'";
     ui->setupUi(this);
 }
 
@@ -18,8 +21,8 @@ TutorialMenu::~TutorialMenu()
 void TutorialMenu::on_btClassic_clicked()
 {
     TutorialWidget* classic=new TutorialWidget();//这是一种写法：classic建在槽函数里
-    classic->lb1->setText("something");//这句无关紧要，试错用的
-
+    //classic->lb1->setText("something");//这句无关紧要，试错用的
+    //classic->setTitle("classic");
     classic->lb0->setText(classic_0);
     classic->lb1->setText(classic_1);
     classic->lb2->setText(classic_2);
@@ -103,4 +106,10 @@ void TutorialMenu::on_btPop_clicked()
 }
 
 
+
+
+void TutorialMenu::on_pushButton_clicked()
+{
+    close();
+}
 

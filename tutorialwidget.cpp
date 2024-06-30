@@ -8,6 +8,7 @@
 #include<QLabel>
 #include<QPushButton>
 #include <QString>
+#include <QFont>
 
 
 TutorialWidget::TutorialWidget(QWidget *parent)
@@ -22,17 +23,25 @@ TutorialWidget::TutorialWidget(QWidget *parent)
     QListWidget * list = new QListWidget(this);
     QStackedWidget * stack = new QStackedWidget (this);
     //在list中加入item
+
     list->addItem("概述");
     list->addItems(QStringList({"起源","分类及特点","代表作品"}));//演示了listItem不同的加入方法
     list->addItem("试听");
-    list->setStyleSheet("QListWidget::item { height: 60px;}");
 
+    list->setStyleSheet("QListWidget::item { height: 100px;}");
+
+
+    QFont font("Arial",15);
     lb0=new QLabel("窗口0",this);
+    lb0->setFont(font);
     lb1=new QLabel("窗口1",this);
+    lb1->setFont(font);
     //lb1->setWordWrap(true);
     lb2=new QLabel("defult文案",this);
+    lb2->setFont(font);
     //lb2->setWordWrap(true);
     lb3=new QLabel(this);
+    lb3->setFont(font);
     //lb3->setText("看到这句话说明还没搭好逻辑yet");
     //lb3->setWordWrap(true);
     music_widget=new MusicWidget;
