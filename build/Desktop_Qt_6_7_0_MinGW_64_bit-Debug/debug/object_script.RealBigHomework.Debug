@@ -5,9 +5,13 @@ debug/basicdialog2.o
 debug/main.o
 debug/mainmenu.o
 debug/musicwidget.o
+debug/reportdialog.o
+debug/test1.o
+debug/test2.o
 debug/testmenu.o
 debug/tutorialmenu.o
 debug/tutorialwidget.o
+debug/qrc_Image.o
 debug/qrc_images.o
 debug/qrc_songs.o
 debug/moc_assessmenu.o
@@ -15,6 +19,9 @@ debug/moc_basicdialog1.o
 debug/moc_basicdialog2.o
 debug/moc_mainmenu.o
 debug/moc_musicwidget.o
+debug/moc_reportdialog.o
+debug/moc_test1.o
+debug/moc_test2.o
 debug/moc_testmenu.o
 debug/moc_tutorialmenu.o
 debug/moc_tutorialwidget.o
